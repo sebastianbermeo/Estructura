@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arboles en JS</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/estilazos.css">
+    <link rel="stylesheet" href="./css/js.css">
+
+    <meta name="theme-color" content="#2091F9">
+
+    <meta name="title" content="Aprende CSS desde cero">
+    <meta name="description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexcgdesign.github.io">
+    <meta property="og:title" content="Aprende CSS desde cero">
+    <meta property="og:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="og:image" content="https://alexcgdesign.github.io/images/css.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jordanalex.com/">
+    <meta property="twitter:title" content="Aprende CSS desde cero">
+    <meta property="twitter:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="twitter:image" content="https://alexcgdesign.github.io/images/css.jpg">
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">Arbol en JavaScript</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Acerca de</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Contacto</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Blog</a>
+                </li>
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">Bienvenido al conocimiento!</h1>
+            <p class="hero__paragraph">Aprenderas como hacer Arboles en JavaScript :)</p>
+        </section>
+    </header>
+  
+
+    <div id="kiko-slider">
+  
+        <ul class="slider">
+          <li id="slide1">
+            <h1></h1>
+            <p>¿Qué es un Arbol?
+                <hr>
+                Los árboles son estructuras de datos en los que los nodos tienen jerarquía. Cada nodo puede tener uno o más árboles hijos y así recursivamente hasta llegar a los nodos hojas, que no tienen hijos.
+                El ejemplo típico es un árbol genealógico o árbol familiar en los que se ve claramente que los nodos padres pueden tener nodos hijos y éstos a su vez más nodos hijos.
+                </p>
+          </li>
+          <li id="slide2">
+            <img src="images/arjs.jpg"/>
+          </li>
+          <li id="slide3">
+            <h1>Arboles</h1>
+            <img src="images/logojs.png"/>
+          </li>
+        </ul>
+        
+        <ul class="menu">
+          <li>
+            <a href="#slide1"></a>
+          </li>
+          <li>
+            <a href="#slide2"></a>
+          </li>
+           <li>
+            <a href="#slide3"></a>
+          </li>
+        </ul>
+        
+      </div>
+
+      <section class="knowledge">
+        <div class="knowledge__container container">
+            <div class="knowledege__texts">
+                <h2 class="subtitle">Caracteristicas</h2>
+                <p class="knowledge__paragraph">Insertar, borrar y localizar nodos tiene complejidad O(log(n)) de media</p>
+                <p>En el peor de los casos, insertar, borrar y localizar nodos tiene complejidad O(n)</p>
+                <hr>
+                <p>Empecemos con la implementación. Para empezar cada nodo del árbol va a tener 3 parámetros: el propio valor (el número a guardar), el hijo de la izquierda y el hijo de la derecha: </p>
+                <img src="images/ar2js.jpg" alt="">
+                <hr>
+                <p>El árbol en sí solo va a almacenar el nodo raíz, es decir, el nodo del que cuelgan todos los demás nodos.</p>
+                <img src="images/ar3js.jpg" alt="">
+                <p>Empecemos con lo interesante, la inserción de nodos:</p>
+                <img src="images/ar4js.jpg" alt="">
+                <p>Primero lo que se hace es crear el nuevo nodo y comprobar si el nodo raíz del árbol, el nodo root está vacío. En ese caso, como no hay elementos se crea el nodo raíz con el nuevo nodo que hemos creado</p>
+
+                <hr>
+                <p>Luego lo que hay que hacer es ir recorriendo el árbol. Creamos currentNode para saber el nodo actual y empezamos por el nodo raíz. Comprobamos ambos hijos y miramos si el valor que vamos a insertar es mayor o menos que el hijo izquierdo y el derecho.</p>
+
+                <hr>
+                <p>Si el nuevo valor es menor lo que se hace es mirar si el nodo en el que estamos tiene hizo izquierdo, si no lo tiene lo insertamos ahí, para ello hacemos que el nodo actual tenga como hijo izquierdo el nuevo nodo y hacemos que isFound sea true para salir del bucle. Si ya tiene nodo izquierdo el nodo actual hacemos que el nodo actual sea el hijo izquierdo para seguir recorriendo el árbol.</p>
+
+                <hr>
+                <p>Lo mismo sucede para el hijo derecho, solo que mirando si el valor que vamos a insertar es mayor que el nodo que estamos recorriendo.</p>
+
+                <hr>
+                <img src="images/ar5js.jpg" alt="">
+
+                <hr>
+                <h2 class="subtitle">Conclusiones</h2>
+                <p>En Javascript como mucho yo implementaría el árbol binario de búsqueda, ya que por defecto viene con listas que podemos usar para crear colas y pilas también:</p>
+                <img src="images/ar6js.jpg" alt="">
+            </div>
+            
+            <figure class="knowledge__picture">
+                <img src="./images/logojs.png" class="knowledge__img">
+            </figure>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer__title">Estructuras de datos</h2>
+
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Acerca de</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Contacto</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
+                <h2 class="footer__newsletter">Suscribete a la Family</h2>
+                <div class="footer__inputs">
+                    <input type="email" placeholder="Email:" class="footer__input" name="_replyto">
+                    <input type="submit" value="Registrate" class="footer__submit">
+                </div>
+            </form>
+        </section>
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">Derechos reservados &copy; Karen Velasco & Sebastian Santanilla</h3>
+        </section>
+    </footer>
+</body>
