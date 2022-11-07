@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleanos en JS</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/estilazos.css">
+    <link rel="stylesheet" href="./css/js.css">
+
+    <meta name="theme-color" content="#2091F9">
+
+    <meta name="title" content="Aprende CSS desde cero">
+    <meta name="description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexcgdesign.github.io">
+    <meta property="og:title" content="Aprende CSS desde cero">
+    <meta property="og:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="og:image" content="https://alexcgdesign.github.io/images/css.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jordanalex.com/">
+    <meta property="twitter:title" content="Aprende CSS desde cero">
+    <meta property="twitter:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="twitter:image" content="https://alexcgdesign.github.io/images/css.jpg">
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">Booleanos en JavaScript</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Acerca de</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Contacto</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Blog</a>
+                </li>
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">Bienvenido al conocimiento!</h1>
+            <p class="hero__paragraph">Aprenderas como hacer Booleanos en JavaScript :)</p>
+        </section>
+    </header>
+  
+
+    <div id="kiko-slider">
+  
+        <ul class="slider">
+          <li id="slide1">
+            <h1></h1>
+            <p>¿Qué es un Booleano en JS?
+                <hr>
+                En JavaScript, frecuentemente se genera de manera implícita la coerción de tipos a booleano. Si, por ejemplo, tienes una sentencia if que evalúa cierta expresión, esa expresión genera coerción a booleano:
+                </p>
+          </li>
+          <li id="slide2">
+            <img src="images/boljs.png"/>
+          </li>
+          <li id="slide3">
+            <h1>Booleanos</h1>
+            <img src="images/logojs.png"/>
+          </li>
+        </ul>
+        
+        <ul class="menu">
+          <li>
+            <a href="#slide1"></a>
+          </li>
+          <li>
+            <a href="#slide2"></a>
+          </li>
+           <li>
+            <a href="#slide3"></a>
+          </li>
+        </ul>
+        
+      </div>
+
+      <section class="knowledge">
+        <div class="knowledge__container container">
+            <div class="knowledege__texts">
+                <h2 class="subtitle">Como definir un Booleano en JavaScript?</h2>
+                <img src="images/bolejjs.jpg" alt="">
+                <hr>
+                <p>En el ejemplo anterior, la sentencia if evalúa a la constante a. Dado que el valor de a no es de tipo booleano, JavaScript genera coerción de tipo para poder evaluar la sentencia y concluir si se trata de un valor Truthy (verdadero) o Falsy (falso). Obtenemos como resultado 'una cadena' debido a que las cadenas de texto en JavaScript son un valor verdadero.</p>
+                <h2 class="subtitle">Solo hay unos cuantos valores que generan coerción a falso:</h2>
+                <p>1. false (en realidad no genera coerción porque ya es falso)</p>
+                <hr>
+                <p>2. null</p>
+                <hr>
+                <p>3. undefined</p>
+                <hr>
+                <p>4. NaN</p>
+                <hr>
+                <p>5. 0</p>
+                <hr>
+                <p>6. -0</p>
+                <hr>
+                <p>7. 0n, -0n (BigInt)</p>
+                <hr>
+                <p>8. " ", ' ', ` ` (cadena de texto vacía)</p>
+                <hr>
+                <p>9. document.all</p>
+                <p>Cualquier otro valor diferente de los anteriores generan coerción a verdadero.</p>
+                <hr>
+                <h2 class="subtitle">Una manera en que se usa la coerción de tipos es con el uso del operador o (||) y del operador y (&&):</h2>
+                <img src="images/bolejjs2.jpg" alt="">
+                <p>En el ejemplo anterior, el operador o (||) verifica el primer operando. Si dicho operando es el valor booleano verdadero (true) o pertenece a lista de los evaluados como verdaderos, JavaScript arroja el resultado inmediatamente sin necesidad de verificar el segundo operando. A esto se le llama una evaluación cortocircuito. Por tal razón, obtenemos 'palabra' en el primer caso y true en el segundo caso. Sin embargo, cuando el primer operando no es verdadero, devuelve el segundo operando. Entonces obtenemos 'palabra' en el tercer caso.</p>
+                <hr>
+                <hr>
+                <hr>
+                <p>El operador  y (&&) funciona de manera similar. Sin embargo, para que la operación sea verdadera, ambos operandos deben ser verdaderos. Devolverá siempre el segundo operando si ambos son verdaderos. De lo contrario, devolverá falso. Por tal razón, obtenemos true en el penúltimo caso y 'palabra' en el último caso</p>
+            </div>
+            
+            <figure class="knowledge__picture">
+                <img src="./images/logojs.png" class="knowledge__img">
+            </figure>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer__title">Estructuras de datos</h2>
+
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Acerca de</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Contacto</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
+                <h2 class="footer__newsletter">Suscribete a la Family</h2>
+                <div class="footer__inputs">
+                    <input type="email" placeholder="Email:" class="footer__input" name="_replyto">
+                    <input type="submit" value="Registrate" class="footer__submit">
+                </div>
+            </form>
+        </section>
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">Derechos reservados &copy; Karen Velasco & Sebastian Santanilla</h3>
+        </section>
+    </footer>
+</body>
