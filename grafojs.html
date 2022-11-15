@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafos en JS</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/estilazos.css">
+    <link rel="stylesheet" href="./css/js.css">
+
+    <meta name="theme-color" content="#2091F9">
+
+    <meta name="title" content="Aprende CSS desde cero">
+    <meta name="description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexcgdesign.github.io">
+    <meta property="og:title" content="Aprende CSS desde cero">
+    <meta property="og:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="og:image" content="https://alexcgdesign.github.io/images/css.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jordanalex.com/">
+    <meta property="twitter:title" content="Aprende CSS desde cero">
+    <meta property="twitter:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="twitter:image" content="https://alexcgdesign.github.io/images/css.jpg">
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">Colas en JavaScript</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Acerca de</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Contacto</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Blog</a>
+                </li>
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">Bienvenido al conocimiento!</h1>
+            <p class="hero__paragraph">Aprenderas como hacer Pilas en JavaScript :)</p>
+        </section>
+    </header>
+  
+
+    <div id="kiko-slider">
+  
+        <ul class="slider">
+          <li id="slide1">
+            <h1></h1>
+            <p>¿Qué es una Pila en JS?
+                <hr>
+                En informática, una pila es una estructura de datos lineal. Si esta afirmación tiene un valor marginal para ti, como originalmente lo hizo conmigo, considera esta alternativa: una pila organiza los datos en orden secuencial.
+                <hr>
+                Este orden secuencial se describe comúnmente como una pila de platos en una cafetería. Cuando se agrega una placa a una pila de platos, la placa retiene el orden de cuándo se agregó; además, cuando se agrega una placa, se empuja hacia la parte inferior de una pila. Cada vez que agregamos una placa nueva, la placa se empuja hacia la parte inferior de la pila, pero también representa la parte superior de la pila de placas.
+                </p>
+          </li>
+          <li id="slide2">
+            <img src="images/pilajs.png"/>
+          </li>
+          <li id="slide3">
+            <h1>Pilas</h1>
+            <img src="images/logojs.png"/>
+          </li>
+        </ul>
+        
+        <ul class="menu">
+          <li>
+            <a href="#slide1"></a>
+          </li>
+          <li>
+            <a href="#slide2"></a>
+          </li>
+           <li>
+            <a href="#slide3"></a>
+          </li>
+        </ul>
+        
+      </div>
+
+      <section class="knowledge">
+        <div class="knowledge__container container">
+            <div class="knowledege__texts">
+                <h2 class="subtitle">Operaciones de una pila</h2>
+                <p class="knowledge__paragraph">Como ahora tenemos un modelo conceptual de una pila, vamos a definir las dos operaciones de una pila:</p>
+                <p>push(data) agrega datos.</p>
+                <p>pop() elimina los datos agregados más recientemente.</p>
+
+                <h2 class="subtitle">Implementación de una pila</h2>
+                <p>¡Ahora escribamos el código para una pila!</p>
+                <hr>
+                <h2 class="subtitle">Propiedades de una pila</h2>
+                <p>Para nuestra implementación, crearemos un constructor llamado Stack. Cada instancia de Stack tendrá dos propiedades: _size y _storage.</p>
+                <img src="images/pilajs1.jpg" alt="">
+                <p>this._storage permite que cada instancia de Stack tenga su propio contenedor para almacenar datos;</p>
+                <p>this._size refleja la cantidad de veces que se enviaron los datos a la versión actual de una pila. Si se crea</p>
+                <p>una nueva instancia de Stack y los datos se insertan en su almacenamiento, this._size aumentará a 1. Si se vuelven a insertar datos en la pila, this._size aumentará a 2. Si se eliminan los datos de la pila, este ._size disminuirá a 1.</p>
+                <h2 class="subtitle">Métodos de una pila</h2>
+                <p>Necesitamos definir métodos que puedan agregar (empujar) y eliminar (pop) datos de una pila. Comencemos por empujar datos</p>
+                <h2 class="subtitle">Método 1 de 2: push(data)</h2>
+                <p>(Este método se puede compartir entre todas las instancias de Stack, así que lo agregaremos al prototipo de Stack).</p>
+                <hr>
+                <p>Tenemos dos requisitos para este método:</p>
+                <p>1. Cada vez que agregamos datos, queremos incrementar el tamaño de nuestra pila.</p>
+                <p>2. Cada vez que agregamos datos, queremos conservar el orden en que se agregaron.</p>
+                <img src="images/pilajs2.jpg" alt="">
+                <p>Nuestra implementación de push(data) incluye la siguiente lógica. Declara una variable llamada size y asígnale el valor de this._size++. Asigna la variable size como una clave de this._storage. Y asigna data como el valor de una clave correspondiente.</p>
+                <hr>
+                <p>Si nuestra pila invoca push(data) cinco veces, entonces el tamaño de nuestra pila sería 5. El primer empujón a la pila asignaría esa información una clave de 1 en this._storage. La quinta invocación de push(data) asignaría a esos datos una clave de 5 en this._storage. ¡Acabamos de asignar orden a nuestros datos!</p>
+                <h2 class="subtitle">Método 2 de 2: pop()</h2>
+                <p>Ahora podemos enviar datos a una pila; el siguiente paso lógico es extraer (eliminar) datos de una pila. Visualizar datos de una pila no es simplemente eliminar datos; está eliminando solo los datos agregados más recientemente.</p>
+                <p>Aquí están nuestros objetivos para este método:</p>
+                <hr>
+                <p>1. Usa el tamaño actual de una pila para obtener los datos agregados más recientemente.</p>
+                <p>2. Eliminar los datos agregados más recientemente.</p>
+                <p>3. Decrementa _this._size por uno.</p>
+                <p>4. Devuelve los datos eliminados más recientemente</p>
+                <img src="images/pilajs3.jpg" alt="">
+                <p>pop() cumple con cada uno de nuestros cuatro objetivos. Primero, declaramos dos variables: size que se inicializa al tamaño de una pila; deletedData que se asigna a los datos agregados más recientemente a una pila. En segundo lugar, eliminamos el par clave-valor de nuestros datos agregados más recientemente. En tercer lugar, disminuimos el tamaño de una pila en 1. En cuarto lugar, devolvemos los datos que se eliminaron de la pila.</p>
+                <hr>
+                <p>Si probamos nuestra implementación actual de pop(), encontramos que funciona para el siguiente caso de uso. Si empujamos los datos con push(data) a una pila, el tamaño de la pila se incrementa en uno. Si extraemos datos de nuestra pila con pop(), el tamaño de nuestra pila se reduce en uno.</p>
+                <hr>
+                <p>Sin embargo, surge un problema cuando revertimos el orden de invocación. Considera la siguiente situación: invocamos pop() y luego push(data). El tamaño de nuestra pila cambia a -1 y luego a 0. ¡Pero el tamaño correcto de nuestra pila es 1!</p>
+                <h2 class="subtitle">Para manejar este caso de uso, agregaremos una instrucción if a pop().</h2>
+                <img src="images/pilajs4.jpg" alt="">
+                <p>Con la adición de nuestra declaración if, el cuerpo de nuestro código se ejecuta solo cuando hay datos en nuestro almacenamiento.</p>
+                <h2 class="subtitle">Implementación completa de una pila</h2>
+                <p>Nuestra implementación de Stack está completa. Independientemente del orden en que invoquemos cualquiera de nuestros métodos, ¡nuestro código funciona! Aquí está la versión final de nuestro código:</p>
+                <img src="images/pilajs5.jpg" alt="">
+            </div>
+            
+            <figure class="knowledge__picture">
+                <img src="./images/logojs.png" class="knowledge__img">
+            </figure>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer__title">Estructuras de datos</h2>
+
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Acerca de</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Contacto</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
+                <h2 class="footer__newsletter">Suscribete a la Family</h2>
+                <div class="footer__inputs">
+                    <input type="email" placeholder="Email:" class="footer__input" name="_replyto">
+                    <input type="submit" value="Registrate" class="footer__submit">
+                </div>
+            </form>
+        </section>
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">Derechos reservados &copy; Karen Velasco & Sebastian Santanilla</h3>
+        </section>
+    </footer>
+</body>

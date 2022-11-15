@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colas en JS</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/estilazos.css">
+    <link rel="stylesheet" href="./css/js.css">
+
+    <meta name="theme-color" content="#2091F9">
+
+    <meta name="title" content="Aprende CSS desde cero">
+    <meta name="description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexcgdesign.github.io">
+    <meta property="og:title" content="Aprende CSS desde cero">
+    <meta property="og:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="og:image" content="https://alexcgdesign.github.io/images/css.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jordanalex.com/">
+    <meta property="twitter:title" content="Aprende CSS desde cero">
+    <meta property="twitter:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="twitter:image" content="https://alexcgdesign.github.io/images/css.jpg">
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">Colas en JavaScript</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Acerca de</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Contacto</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Blog</a>
+                </li>
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">Bienvenido al conocimiento!</h1>
+            <p class="hero__paragraph">Aprenderas como hacer Colas en JavaScript :)</p>
+        </section>
+    </header>
+  
+
+    <div id="kiko-slider">
+  
+        <ul class="slider">
+          <li id="slide1">
+            <h1></h1>
+            <p>¿Qué es una Cola en JS?
+                <hr>
+                Similar a una pila, una cola es una estructura de datos lineal. A diferencia de una pila, una cola solo elimina los datos agregados más antiguos.
+                <hr>
+                Para ayudarte a conceptualizar cómo funcionaría esto, tomemos un momento para usar una analogía. Imagina una cola que es muy similar al sistema de venta de entradas de una tienda de delicatessen. Cada cliente toma un boleto y se sirve cuando se llama a su número. El cliente que toma el primer boleto debe ser atendido primero.
+                <hr>
+                Un ejemplo más práctico de una cola es el bucle de eventos de un navegador web. A medida que se desencadenan diferentes eventos, como el clic de un botón, se agregan a la cola de un bucle de evento y se manejan en el orden en que ingresaron a la cola.
+                </p>
+          </li>
+          <li id="slide2">
+            <img src="images/colajs.jpg"/>
+          </li>
+          <li id="slide3">
+            <h1>Colas</h1>
+            <img src="images/logojs.png"/>
+          </li>
+        </ul>
+        
+        <ul class="menu">
+          <li>
+            <a href="#slide1"></a>
+          </li>
+          <li>
+            <a href="#slide2"></a>
+          </li>
+           <li>
+            <a href="#slide3"></a>
+          </li>
+        </ul>
+        
+      </div>
+
+      <section class="knowledge">
+        <div class="knowledge__container container">
+            <div class="knowledege__texts">
+                <h2 class="subtitle">Operaciones de una cola</h2>
+                <p class="knowledge__paragraph">Como ahora tenemos un modelo conceptual de cola, permítanos definir sus operaciones. Como notarás, las operaciones de una cola son muy similares a una pila. La diferencia radica en dónde se eliminan los datos.</p>
+                <p>enqueue(data) agrega datos a una cola.</p>
+                <p>dequeue elimina los datos agregados más antiguos a una cola.</p>
+
+                <h2 class="subtitle">Implementación de una cola</h2>
+                <h2 class="subtitle">Propiedades de una cola</h2>
+                <p>Para nuestra implementación, crearemos un constructor llamado Queue. A continuación, agregaremos tres propiedades: _oldestIndex, _newestIndex y _storage. La necesidad de _oldestIndex y _newestIndex se volverá más clara en la siguiente sección.</p>
+                <img src="images/colajs2.jpg" alt="">
+                <h2 class="subtitle">Métodos de una cola</h2>
+                <p>Ahora crearemos los tres métodos compartidos entre todas las instancias de una cola: size(), enqueue(data) y dequeue(data). Esbozaré los objetivos para cada método, revelaré el código para cada método y luego explicaré el código para cada método.</p>
+                <h2 class="subtitle">Método 1 de 3: size()</h2>
+                <hr>
+                <p>Devuelve el tamaño correcto para una cola.</p>
+                <p>1. Devuelve el tamaño correcto para una cola.</p>
+                <p>2. Conserva el rango correcto de claves para una cola.</p>
+                <img src="images/colajs3.jpg" alt="">
+                <p>Implementar size() puede parecer trivial, pero rápidamente descubrirás que no es cierto. Para entender por qué, debemos revisar rápidamente cómo se implementó el size (tamaño) para una pila.</p>
+                <hr>
+                <p>Usando nuestro modelo conceptual de una pila, imaginemos que empujamos cinco placas en una pila. El tamaño de nuestra pila es de cinco y cada placa tiene un número asociado desde una (primera placa añadida) hasta cinco (la última placa añadida). Si removemos tres placas, entonces tenemos dos placas. Simplemente podemos restar tres de cinco para obtener el tamaño correcto, que es dos. Este es el punto más importante sobre el tamaño de una pila: el tamaño actual representa la clave correcta asociada con la placa en la parte superior de la pila (2) y la otra placa en la pila (1). En otras palabras, el rango de claves siempre es del tamaño actual a 1.</p>
+                <hr>
+                <p>Ahora, apliquemos esta implementación del tamaño size de la pila a nuestra cola. Imagina que cinco clientes reciben un boleto de nuestro sistema de venta de entradas. El primer cliente tiene un boleto que muestra el número 1 y el quinto tiene un boleto que muestra el número 5. Con una cola, el cliente con el primer boleto se sirve primero.</p>
+                <hr>
+                <p>Este es el beneficio de tener las siguientes dos propiedades en una cola: _oldestIndex y _newestIndex. Todo esto puede parecer confuso; todavía estoy confundido de vez en cuando. Lo que me ayuda a racionalizar todo es el siguiente ejemplo que he desarrollado.</p>
+                <hr>
+                <hr>
+                <p>Imagina que nuestra deli tiene dos sistemas de emisión de boletos:</p>
+                <hr>
+                <p>1. _newestIndex representa un ticket de un sistema de ticketing de clientes.</p>
+                <hr>
+                <p>2. _oldestIndex representa un ticket de un sistema de ticketing de empleados.</p>
+                <hr>
+                <p>Hemos explorado adecuadamente el size(), así que ahora vamos a poner en cola los datos con enqueue(data).</p>
+                <h2 class="subtitle">Método 2 de 3: enqueue(data)</h2>
+                <p>Para enqueue, tenemos dos objetivos:</p>
+                <hr>
+                <p>1. Usa _newestIndex como clave de this._storage y usa cualquier dato que se agregue como valor de esa clave.</p>
+                <p>2. Incrementa el valor de _newestIndex por 1.</p>
+                <p>En función de estos dos objetivos, crearemos la siguiente implementación de enqueue(data):</p>
+                <img src="images/colajs4.jpg" alt="">
+                <p>El cuerpo de este método contiene dos líneas de código. En la primera línea, usamos this._newestIndex para crear una nueva clave para this._storage y asignarle data. this._newestIndex siempre comienza en 1. En la segunda línea de código, incrementamos this._newestIndex en 1, lo que actualiza su valor a 2</p>
+                <hr>
+                <p>Ese es todo el código que necesitamos para enqueue(data). Vamos a implementar dequeue().</p>
+                <h2 class="subtitle">Método 3 de 3: dequeue()</h2>
+                <p>Estos son los objetivos de este método:</p>
+                <p>1. Elimina los datos más antiguos en una cola.</p>
+                <p>2. Incrementa _oldestIndex por uno.</p>
+                <img src="images/colajs5.jpg" alt="">
+                <hr>
+                <p>En el cuerpo de dequeue(), declaramos dos variables. La primera variable, oldestIndex, tiene asignado el valor actual de la cola para this._oldestIndex. A la segunda variable, deletedData, se le asigna el valor contenido en this._storage[oldestIndex].</p>
+                <hr>
+                <p>A continuación, eliminamos el índice más antiguo en la cola. Después de eliminarlo, incrementamos this._oldestIndex en 1. Finalmente, devolvemos los datos que acabamos de eliminar.</p>
+                <hr>
+                <p>Similar al problema en nuestra primera implementación de pop() con una pila, nuestra implementación de dequeue() no maneja situaciones donde se eliminan datos antes de que se agreguen datos. Necesitamos crear un condicional para manejar este caso de uso.</p>
+                <img src="images/colajs6.jpg" alt="">
+            </div>
+            
+            <figure class="knowledge__picture">
+                <img src="./images/logojs.png" class="knowledge__img">
+            </figure>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer__title">Estructuras de datos</h2>
+
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Acerca de</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Contacto</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
+                <h2 class="footer__newsletter">Suscribete a la Family</h2>
+                <div class="footer__inputs">
+                    <input type="email" placeholder="Email:" class="footer__input" name="_replyto">
+                    <input type="submit" value="Registrate" class="footer__submit">
+                </div>
+            </form>
+        </section>
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">Derechos reservados &copy; Karen Velasco & Sebastian Santanilla</h3>
+        </section>
+    </footer>
+</body>

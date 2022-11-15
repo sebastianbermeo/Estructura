@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas en c#</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/estilazos.css">
+    <link rel="stylesheet" href="./css/practicante.css">
+
+    <meta name="theme-color" content="#2091F9">
+
+    <meta name="title" content="Aprende CSS desde cero">
+    <meta name="description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexcgdesign.github.io">
+    <meta property="og:title" content="Aprende CSS desde cero">
+    <meta property="og:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="og:image" content="https://alexcgdesign.github.io/images/css.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jordanalex.com/">
+    <meta property="twitter:title" content="Aprende CSS desde cero">
+    <meta property="twitter:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="twitter:image" content="https://alexcgdesign.github.io/images/css.jpg">
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">Listas EN C#</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Acerca de</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Contacto</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Blog</a>
+                </li>
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">Bienvenido al conocimiento!</h1>
+            <p class="hero__paragraph">Aprenderas como hacer Listas en C# :)</p>
+        </section>
+    </header>
+  
+
+    <div id="kiko-slider">
+  
+        <ul class="slider">
+          <li id="slide1">
+            <h1></h1>
+            <p>¿Qué es una pila en C#?
+                <hr>
+                Las listas en C# (C# lists) son un tipo de datos nativo del framework de .NET que nos permite almacenar una secuencia de variables. Por ejemplo, si queremos gestionar un conjunto de nombres de personas, podríamos utilizar una variable de tipo List < string>, que se correspondería con una lista de strings en la sintaxis C#.
+                </p>
+          </li>
+          <li id="slide2">
+            <img src="images/listacc.png"/>
+          </li>
+          <li id="slide3">
+            <h1>Listas</h1>
+            <img src="images/c.jpg"/>
+          </li>
+        </ul>
+        
+        <ul class="menu">
+          <li>
+            <a href="#slide1"></a>
+          </li>
+          <li>
+            <a href="#slide2"></a>
+          </li>
+           <li>
+            <a href="#slide3"></a>
+          </li>
+        </ul>
+        
+      </div>
+
+      <section class="knowledge">
+        <div class="knowledge__container container">
+            <div class="knowledege__texts">
+                <h2 class="subtitle">Inicializando una lista</h2>
+                <p>Para inicializar una lista en C#, es tan sencillo como utilizar la keyword List, seguido del tipo de dato que va a contener dicha lista entre los símbolos <>. A continuación, debemos utilizar el constructor de List como si de cualquier otro objeto C# se tratase.</p>
+                <hr>
+                <img src="images/listacc2.jpg" alt="">
+                <p>Una vez hemos construido nuestro objeto Lista, ya podemos comenzar a utilizarla. En primer lugar, vamos a añadir unos cuántos nombres de personas:</p>
+                <img src="images/listacc3.jpg" alt="">
+                <h2 class="subtitle">Inicialización de una lista en línea (list inline initialization)</h2>
+                <p>En el ejemplo anterior vimos como inicializamos una lista, y después le vamos añadiendo tantos elementos como necesitemos. Otra forma muy legible de inicializar una lista en una única línea es utilizar el inicializador inline que nos proporciona el .NET framework:</p>
+                <img src="images/listacc4.jpg" alt="">
+                <h2 class="subtitle">Añadir elementos en una lista C#</h2>
+                <p>En los ejemplos anteriores ya hemos visto una de las dos formas de añadir elementos a una lista en C#. Esta primera forma que vamos a ver consiste en usar la función Add del objeto List, y que añadirá el elemento al final de la lista.</p>
+                <img src="images/listacc5.jpg" alt="">
+                <p>Pero si investigamos un poco en las funciones que nos permite usar el objeto List, tenemos otra forma de añadir elementos que es a través de la función Insert. En este caso, la función Insert también nos pide la posición (índice) donde queremos insertar el elemento. Por ejemplo, si quisiéramos añadir un elemento al principio de nuestra lista de personNames, utilizaríamos la siguiente función:</p>
+                <img src="images/listacc6.jpg" alt="">
+                <p>De esta forma, nuestra lista estaría formada por tres nombres: Pepito, Kevin y Borja (en este orden). Esto es importante si el orden de los elementos dentro de la lista es relevante.</p>
+                <h2 class="subtitle">Eliminar elementos</h2>
+                <p>Al igual que hay varias formas de añadir elementos, también tenemos distintas maneras de eliminar un elemento de una lista. La primera y más sencilla forma es utilizar la función Remove que nos proporciona List. Le pasamos el elemento que queramos eliminar, y lo sacará de nuestra lista:</p>
+                <img src="images/listacc7.jpg" alt="">
+                <p>La segunda forma de eliminar objetos de una lista es utilizar RemoveAt. En este caso, le diremos qué posición (índice) de la lista queremos eliminar. Si por ejemplo queremos eliminar el primer objeto, utilizamos lo siguiente:</p>
+                <img src="images/listacc8.jpg" alt="">
+                <p>Con esto, eliminaríamos el primer elemento de nuestra lista (Kevin), y tan solo nos quedaría un elemento (Borja).</p>
+                <h2 class="subtitle">Ordenar elementos en una lista</h2>
+                <p>En los ejemplos anteriores, comentamos que los elementos dentro de una lista ocupan la posición en la que se añadieron a través de las funciones Add o Insert.</p>
+                <hr>
+                <p>Esto es así, pero también existe la posibilidad de ordenar una lista de elementos a través de la función Sort. Esto ordenará los elementos de la lista en sentido ascendente (de la A a la Z en el caso de strings, o de más pequeño a más grande en el caso de números).</p>
+                <img src="images/listacc9.jpg" alt="">
+            </div>
+            
+            <figure class="knowledge__picture">
+                <img src="./images/logoc.png" class="knowledge__img">
+            </figure>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer__title">Estructuras de datos</h2>
+
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Acerca de</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Contacto</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
+                <h2 class="footer__newsletter">Suscribete a la Family</h2>
+                <div class="footer__inputs">
+                    <input type="email" placeholder="Email:" class="footer__input" name="_replyto">
+                    <input type="submit" value="Registrate" class="footer__submit">
+                </div>
+            </form>
+        </section>
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">Derechos reservados &copy; Karen Velasco & Sebastian Santanilla</h3>
+        </section>
+    </footer>
+</body>
