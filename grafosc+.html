@@ -38,7 +38,7 @@
     <header class="hero">
         <nav class="nav container">
             <div class="nav__logo">
-                <h2 class="nav__title">Listas EN C++</h2>
+                <h2 class="nav__title">GRAFOS EN C++</h2>
             </div>
 
             <ul class="nav__link nav__link--menu">
@@ -65,7 +65,7 @@
 
         <section class="hero__container container">
             <h1 class="hero__title">Bienvenido al conocimiento!</h1>
-            <p class="hero__paragraph">Aprenderas como hacer pilas en C++ :)</p>
+            <p class="hero__paragraph">Aprenderas como hacer grafos en C++ :)</p>
         </section>
     </header>
   
@@ -75,16 +75,16 @@
         <ul class="slider">
           <li id="slide1">
             <h1></h1>
-            <p>¿Qué es una pila?
+            <p>¿Qué es un grafo?
                 <hr>
-                Una pila (stack) es una estructura de datos, que consta de una serie de datos, en la cual las inserciones y eliminaciones se hacen por un extremo, llamado cima (top), de la pila. La estructura pila se conoce como LIFO (last-in, first-out, último en entrar, primero en salir), que significa “último elemento introducido, primero sacado”.
+                Un grafo es un par compuesto por dos conjuntos: Un conjunto de nodos; y un conjunto de relaciones entre los nodos. La representación que realicemos en C++ tendrá que ser capaz de guardar esta información en memoria.
                 </p>
           </li>
           <li id="slide2">
-            <img src="images/pilac.png"/>
+            <img src="images/grafoc+.jpg"/>
           </li>
           <li id="slide3">
-            <h1>Pilas</h1>
+            <h1>Grafos</h1>
             <img src="images/c++.png"/>
           </li>
         </ul>
@@ -106,33 +106,21 @@
       <section class="knowledge">
         <div class="knowledge__container container">
             <div class="knowledege__texts">
-                <h2 class="subtitle">Implementación de las pilas</h2>
-                <p class="knowledge__paragraph">Implementación con vectores</p>
+                <h2 class="subtitle">Implementación de grafos en C++ usando STL</h2>
+                <p>Dado un gráfico no dirigido o dirigido, implemente una estructura de datos de gráfico en C++ usando STL. Implemente para graphs ponderados y no ponderados utilizando la representación de lista de adyacencia del gráfico.</p>
                 <hr>
-                <p>La implementacion basada en vectores o matrices para las listas vistas antes, no es particularmente buena para las pilas, porque cada poner o quitar requiere mover la lista entera hacia arriba o hacia abajo y por tanto, requiere un tiempo proporcional al número de elementos en la pila. Una forma mejor de usar matrices toma en cuenta el hecho de que inserciones y borrados ocurren solamente en el tope y por lo tanto dichas operaciones sólo se efectuarán en un extremo de la estructura. Obsérvese que la mejora puede ser introducida haciendo las nserciones y borrados al final de la lista dentro de la implementación matricial de las listas. Podemos situar el fondo de la pila en el primer elemento de la matriz y hacer crecer la pila hacia el ultimo elemento de la matriz. Un cursor llamado tope indica la posición actual del primer elemento de la pila.</p>
+                <h2 class="subtitle">Terminología y Representaciones de Graphs</h2>
+                <p>Como ya sabemos, la lista de adyacencia asocia cada vértice del grafo con la colección de sus vértices o aristas vecinos, es decir, cada vértice almacena una lista de vértices adyacentes. Hay muchas variaciones de la representación de la lista de adyacencia dependiendo de la implementación.</p>
+                <img src="images/grafoc+2.jpg" alt="">
+                <p>Por ejemplo, a continuación se muestra la representación de la lista de adyacencia del graph anterior:</p>
                 <hr>
-                <p>De este modo tenemos un vector elementos donde almacenaremos los elementos que contiene la pila, también tenemos Lmax, el cual nos dice las posiciones que hay reservadas en la pila, y tope que es el elemento de la cabeza de la pila.</p>
-                <hr>
-                <img src="images/pilac2.jpg" alt="">
-                <hr>
-                <p>Vamos a especificar a continuación la función de abstracción y el invariante de la representación de este tipo de pila:</p>
-                <h2 class="subtitle">Función de Abstracción</h2>
-                <img src="images/pilac3.jpg" alt="">
-                <h2 class="subtitle">Invariante de Representación</h2>
-                <p>0 < r.Lmax.</p>
-                <p>-1 <= r.tope < r.Lmax.</p>
-                <hr>
-                <p>r.elementos apunta a una dirección con espacio para al menos r.Lmax componentes de tipo T.</p>
-                <p>De manera que la clase Pila (con implementación mediante vectores) en C++ tendría el siguiente aspecto</p>
-                <img src="images/pilac4.jpg" alt="">
-                <h2 class="subtitle">Implementación enlazada</h2>
-                <p>La representación mediante nodos enlazados de una pila es facil, porque poner y quitar operan sólamente sobre el nodo de cabecera, de hecho, las cabeceras pueden ser punteros mejor que nodos completos, ya que no hay noción de posición para las pilas y por tanto no necesitamos representar la posición 1 en una forma análoga a otras posiciones tal y como muestra figura.</p>
-                <img src="images/pilac5.jpg" alt="">
-                <h2 class="subtitle">Función de Abstracción</h2>
-                <p>Dado el objeto del tipo rep r, el objeto abstracto al que representa es:</p>
-                <p>p = l, con el tope de la pila en la posición l.primero ().</p>
-                <h2 class="subtitle">De manera que la clase Pila (con implementación enlazada) en C++ tendría el siguiente aspecto:</h2>
-                <img src="images/pilac6.jpg" alt="">
+                <img src="images/grafoc+3.jpg" alt="">
+                <p>La representación anterior permite el almacenamiento de datos adicionales en los vértices, pero es muy eficiente en la práctica cuando el graph contiene solo unas pocas aristas. Usaremos la clase de vector STL para implementar la representación de lista de adyacencia de un graph.</p>
+                <h2 class="subtitle">Implementación de graph dirigidos usando STL</h2>
+                <img src="images/grafoc+4.jpg" alt="">
+                <img src="images/grafoc+5.jpg" alt="">
+                <h2 class="subtitle">Resultado:</h2>
+                <img src="images/grafoc+6.jpg" alt="">
             </div>
             
             <figure class="knowledge__picture">

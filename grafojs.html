@@ -38,7 +38,7 @@
     <header class="hero">
         <nav class="nav container">
             <div class="nav__logo">
-                <h2 class="nav__title">Colas en JavaScript</h2>
+                <h2 class="nav__title">Grafos en JavaScript</h2>
             </div>
 
             <ul class="nav__link nav__link--menu">
@@ -65,7 +65,7 @@
 
         <section class="hero__container container">
             <h1 class="hero__title">Bienvenido al conocimiento!</h1>
-            <p class="hero__paragraph">Aprenderas como hacer Pilas en JavaScript :)</p>
+            <p class="hero__paragraph">Aprenderas como hacer Grafos en JavaScript :)</p>
         </section>
     </header>
   
@@ -75,18 +75,16 @@
         <ul class="slider">
           <li id="slide1">
             <h1></h1>
-            <p>¿Qué es una Pila en JS?
+            <p>¿Qué es un grafo?
                 <hr>
-                En informática, una pila es una estructura de datos lineal. Si esta afirmación tiene un valor marginal para ti, como originalmente lo hizo conmigo, considera esta alternativa: una pila organiza los datos en orden secuencial.
-                <hr>
-                Este orden secuencial se describe comúnmente como una pila de platos en una cafetería. Cuando se agrega una placa a una pila de platos, la placa retiene el orden de cuándo se agregó; además, cuando se agrega una placa, se empuja hacia la parte inferior de una pila. Cada vez que agregamos una placa nueva, la placa se empuja hacia la parte inferior de la pila, pero también representa la parte superior de la pila de placas.
-                </p>
+                Un grafo es un conjunto, no vacío, de objetos llamados vértices (o nodos) y una selección de pares de vértices, llamados aristas (edges en inglés) que pueden ser orientados o no
+                
           </li>
           <li id="slide2">
-            <img src="images/pilajs.png"/>
+            <img src="images/grafojs.jpg"/>
           </li>
           <li id="slide3">
-            <h1>Pilas</h1>
+            <h1>Grafos</h1>
             <img src="images/logojs.png"/>
           </li>
         </ul>
@@ -108,52 +106,30 @@
       <section class="knowledge">
         <div class="knowledge__container container">
             <div class="knowledege__texts">
-                <h2 class="subtitle">Operaciones de una pila</h2>
-                <p class="knowledge__paragraph">Como ahora tenemos un modelo conceptual de una pila, vamos a definir las dos operaciones de una pila:</p>
-                <p>push(data) agrega datos.</p>
-                <p>pop() elimina los datos agregados más recientemente.</p>
+                <h2 class="subtitle">Path</h2>
+                <p>Un path o trayectoria es una secuencia de vértices de manera que están conectados por sus aristas. Por ejemplo, en el grafo anterior tenemos un path que se define como [LIM, CMX, SCL, AQP]. Esta trayectoria está usando 3 aristas para conectar los vértices. A la cantidad de aristas que usa un path le llamamos el largo o length del path. Podemos tener un path de un vértice hacia si mismo, a eso le llamamos loop, y tienen un length de 0.</p>
 
-                <h2 class="subtitle">Implementación de una pila</h2>
-                <p>¡Ahora escribamos el código para una pila!</p>
+                <h2 class="subtitle">Ciclo</h2>
+                <p>Decimos que se ha formado un ciclo cuando un vértice se repite. Si sólo se tratara del último y el primer vértice hablamos de un ciclo simple, ya que son el mismo. Si se repiten más vértices menos el primero y el último hablamos de un ciclo general.</p>
                 <hr>
-                <h2 class="subtitle">Propiedades de una pila</h2>
-                <p>Para nuestra implementación, crearemos un constructor llamado Stack. Cada instancia de Stack tendrá dos propiedades: _size y _storage.</p>
-                <img src="images/pilajs1.jpg" alt="">
-                <p>this._storage permite que cada instancia de Stack tenga su propio contenedor para almacenar datos;</p>
-                <p>this._size refleja la cantidad de veces que se enviaron los datos a la versión actual de una pila. Si se crea</p>
-                <p>una nueva instancia de Stack y los datos se insertan en su almacenamiento, this._size aumentará a 1. Si se vuelven a insertar datos en la pila, this._size aumentará a 2. Si se eliminan los datos de la pila, este ._size disminuirá a 1.</p>
-                <h2 class="subtitle">Métodos de una pila</h2>
-                <p>Necesitamos definir métodos que puedan agregar (empujar) y eliminar (pop) datos de una pila. Comencemos por empujar datos</p>
-                <h2 class="subtitle">Método 1 de 2: push(data)</h2>
-                <p>(Este método se puede compartir entre todas las instancias de Stack, así que lo agregaremos al prototipo de Stack).</p>
+                <img src="images/grafojs2.jpg" alt="">
+                <p>En el grafo superior podemos observar un grafo direccionado o dígrafo que tiene un ciclo simple.</p>
+                <h2 class="subtitle">Grafo ponderado</h2>
+                <p>Un grafo ponderado es aquél en que cada arista te da información de la conexión entre uno y otro vértice. Por ejemplo, imaginemos que cada sede (nodo en nuestro grafo) va un número de semanas por delante de la anterior, esto se puede representar como pesos en semanas en el grafo.</p>
+                <img src="images/grafojs3.jpg" alt="">
+                <h2 class="subtitle">Matriz Adyacente o Adjacency Matrix</h2>
+                <p>Además de la forma gráfica tenemos otras formas de reprensentar los grafos. Una de estas formas es la matriz adyacente.</p>
                 <hr>
-                <p>Tenemos dos requisitos para este método:</p>
-                <p>1. Cada vez que agregamos datos, queremos incrementar el tamaño de nuestra pila.</p>
-                <p>2. Cada vez que agregamos datos, queremos conservar el orden en que se agregaron.</p>
-                <img src="images/pilajs2.jpg" alt="">
-                <p>Nuestra implementación de push(data) incluye la siguiente lógica. Declara una variable llamada size y asígnale el valor de this._size++. Asigna la variable size como una clave de this._storage. Y asigna data como el valor de una clave correspondiente.</p>
+                <p>Por ejemplo, asumiendo nuestro primer grafo no dirigido, tendríamos su matriz adyacente como sigue:</p>
+                <img src="images/grafojs4.jpg" alt="">
+                <p>Notarás que no nos da mayor información que la existencia de conexiones entre vértices. Por ejemplo el vértice LIM esta unido a CMX y AQP, que lo puedes ver refleajado en la matriz de la derecha con 1 en dichas intersecciones.</p>
+                <p>El en caso de un grafo dirigido, la representación varía indicándonos el sentido de la conexión a través de signos positivo y negativo. Negativo indica que la conexión ingresa al vértice, mientras que positivo es que sale del vértice. Por ejemplo en el siguiente grafo tendrás:</p>
+                <img src="images/grafojs5.jpg" alt="">
+                <h2 class="subtitle">Matriz Adyacente o Adjacency Matrix</h2>
+                <p>Tal como la matriz adyacente, la lista adyacente es otra forma de representar los grafos. Esta puede parecer mucho más sencilla. Pero va a depender del caso.</p>
                 <hr>
-                <p>Si nuestra pila invoca push(data) cinco veces, entonces el tamaño de nuestra pila sería 5. El primer empujón a la pila asignaría esa información una clave de 1 en this._storage. La quinta invocación de push(data) asignaría a esos datos una clave de 5 en this._storage. ¡Acabamos de asignar orden a nuestros datos!</p>
-                <h2 class="subtitle">Método 2 de 2: pop()</h2>
-                <p>Ahora podemos enviar datos a una pila; el siguiente paso lógico es extraer (eliminar) datos de una pila. Visualizar datos de una pila no es simplemente eliminar datos; está eliminando solo los datos agregados más recientemente.</p>
-                <p>Aquí están nuestros objetivos para este método:</p>
-                <hr>
-                <p>1. Usa el tamaño actual de una pila para obtener los datos agregados más recientemente.</p>
-                <p>2. Eliminar los datos agregados más recientemente.</p>
-                <p>3. Decrementa _this._size por uno.</p>
-                <p>4. Devuelve los datos eliminados más recientemente</p>
-                <img src="images/pilajs3.jpg" alt="">
-                <p>pop() cumple con cada uno de nuestros cuatro objetivos. Primero, declaramos dos variables: size que se inicializa al tamaño de una pila; deletedData que se asigna a los datos agregados más recientemente a una pila. En segundo lugar, eliminamos el par clave-valor de nuestros datos agregados más recientemente. En tercer lugar, disminuimos el tamaño de una pila en 1. En cuarto lugar, devolvemos los datos que se eliminaron de la pila.</p>
-                <hr>
-                <p>Si probamos nuestra implementación actual de pop(), encontramos que funciona para el siguiente caso de uso. Si empujamos los datos con push(data) a una pila, el tamaño de la pila se incrementa en uno. Si extraemos datos de nuestra pila con pop(), el tamaño de nuestra pila se reduce en uno.</p>
-                <hr>
-                <p>Sin embargo, surge un problema cuando revertimos el orden de invocación. Considera la siguiente situación: invocamos pop() y luego push(data). El tamaño de nuestra pila cambia a -1 y luego a 0. ¡Pero el tamaño correcto de nuestra pila es 1!</p>
-                <h2 class="subtitle">Para manejar este caso de uso, agregaremos una instrucción if a pop().</h2>
-                <img src="images/pilajs4.jpg" alt="">
-                <p>Con la adición de nuestra declaración if, el cuerpo de nuestro código se ejecuta solo cuando hay datos en nuestro almacenamiento.</p>
-                <h2 class="subtitle">Implementación completa de una pila</h2>
-                <p>Nuestra implementación de Stack está completa. Independientemente del orden en que invoquemos cualquiera de nuestros métodos, ¡nuestro código funciona! Aquí está la versión final de nuestro código:</p>
-                <img src="images/pilajs5.jpg" alt="">
+                <p>Una lista adyacente esta representada por una lista en la que los índices son los vértices y está conectado a un arreglo con los otros vértices. Cambié el grafo un poco para que puedan verlo mejor.</p>
+                <img src="images/grafojs6.jpg" alt="">
             </div>
             
             <figure class="knowledge__picture">

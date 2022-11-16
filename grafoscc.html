@@ -38,7 +38,7 @@
     <header class="hero">
         <nav class="nav container">
             <div class="nav__logo">
-                <h2 class="nav__title">Listas EN C#</h2>
+                <h2 class="nav__title">Grafos EN C#</h2>
             </div>
 
             <ul class="nav__link nav__link--menu">
@@ -65,7 +65,7 @@
 
         <section class="hero__container container">
             <h1 class="hero__title">Bienvenido al conocimiento!</h1>
-            <p class="hero__paragraph">Aprenderas como hacer Pilas en C# :)</p>
+            <p class="hero__paragraph">Aprenderas como hacer Grafos en C# :)</p>
         </section>
     </header>
   
@@ -75,17 +75,16 @@
         <ul class="slider">
           <li id="slide1">
             <h1></h1>
-            <p>¿Qué es una pila en C#?
+            <p>¿Qué es una Grafo en C#?
                 <hr>
-                La clase Stack de C# (pila en ingles), es una estructura dinámica que nos permite almacenar datos mediante LIFO (Last Input First Output o ultimo en entrar primero en salir).
-                En esta pila, podemos meter los datos del tipo que indiquemos, por ejemplo, podemos hacer una pila de cadenas, de números, objetos, etc.
+                Un grafo en el ámbito de las ciencias de la computación es un tipo abstracto de datos (TAD), que consiste en un conjunto de nodos (también llamados vértices) y un conjunto de arcos (aristas) que establecen relaciones entre los nodos. El concepto de grafo TAD desciende directamente del concepto matemático de grafo.
                 </p>
           </li>
           <li id="slide2">
             <img src="images/pilacc.PNG"/>
           </li>
           <li id="slide3">
-            <h1>Pilas</h1>
+            <h1>Grafos</h1>
             <img src="images/c.jpg"/>
           </li>
         </ul>
@@ -107,23 +106,22 @@
       <section class="knowledge">
         <div class="knowledge__container container">
             <div class="knowledege__texts">
-                <h2 class="subtitle">Para crear un Stack en C#:</h2>
-                <img src="images/pilacc2.jpg" alt="">
-                <p>Si la queréis de otro tipo, seria cambiar string por el tipo que queráis.</p>
+                <h2 class="subtitle">Implementacion de grafos en C#:</h2>
+                <h2 class="subtitle">1. Nodos, arcos y grafos</h2>
+                <p>La primera etapa consiste en definir nuestros grafos. Vamos a empezar por los nodos, a continuación veremos los arcos que los enlazan y por último el grafo completo.</p>
+                <h2 class="subtitle">Implementación de los nodos</h2>
+                <p>Los nodos son las estructuras básicas de nuestros grafos. Sin embargo, el contenido real de un nodo depende en gran medida del problema que se desea resolver: puede tratarse de estaciones, de casillas en una cuadrícula, de servidores, de ciudades...</p>
                 <hr>
-                <h2 class="subtitle">Para insertar elementos en la pila, lo haremos con push.</h2>
-                <img src="images/pilacc3.jpg" alt="">
-                <p>Para insertar elementos en la pila, lo haremos con push.</p>
-                <h2 class="subtitle"><h2 class="subtitle">Si queremos quitar algún elemento, lo haremos con pop, pero recuerda sacara el ultimo que se metió, en este caso el string «e»</h2></h2>
-                <img src="images/pilacc4.jpg" alt="">
-                <h2 class="subtitle">Si queremos saber quien es el primer elemento de la pila, lo podemos saber con Peek(). Este no elimina de la pila, solo lo devuelve.</h2>
-                <img src="images/pilacc5.jpg" alt="">
-                <h2 class="subtitle">Para saber el numero de elementos de la pila usaremos la propiedad Count.</h2>
-                <img src="images/pilacc6.jpg" alt="">
-                <h2 class="subtitle">Para recorrer la pila, lo podemos hacer con un foreach:</h2>
-                <img src="images/pilacc7.jpg" alt="">
-                <h2 class="subtitle">Otra forma de recorrer una pila, seria así:</h2>
-                <img src="images/pilacc8.jpg" alt="">
+                <p>Creamos, por tanto, una clase abstracta Node, que contendrá la información necesaria para los algoritmos. Esta clase debe ser heredada para la resolución práctica de un problema.</p>
+                <hr>
+                <hr>
+                <p>Los nodos necesitan tres datos:</p>}
+                <hr>
+                <p>El precursor, que es también un nodo.</p>
+                <p>La distancia desde el inicio.</p>
+                <p>La distancia estimada hasta el destino (si es necesario).</p>
+                <h2 class="subtitle">Utilizaremos propiedades. En el caso de las dos primeras, poseen valores por defecto.</h2>
+                <img src="images/grafocc.jpg" alt="">
             </div>
             
             <figure class="knowledge__picture">
